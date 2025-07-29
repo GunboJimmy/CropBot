@@ -4,7 +4,7 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
 });
 
-const TOKEN = ''; 
+const TOKEN = process.env.DISCORD_TOKEN; 
 
 client.once('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
