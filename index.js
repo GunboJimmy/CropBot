@@ -13,7 +13,7 @@ client.once('ready', () => {
 client.on('messageCreate', (message) => {
   if (message.content == '!cropcheck') {
     let cropRoll = Math.floor(Math.random() * 1226) + 1;
-    if (cropRoll == 69 || clankCount >= 2) {
+    if (clankCount >= 2) {
         message.reply('Today, the crops are: **Go fuck yourself.**');
     } else if (cropRoll == 1000) {
         message.reply('Today, the crops are: **Whirring and humming, whirring and humming, whirring and humming, whirring and humming. Will this noise never end? Nothing but noise, noise, enternal noise! Dancing and prancing and shouting and laughing and crying and snorting and snivelling. Animals! All of them! Animals!**');
@@ -35,11 +35,11 @@ client.on('messageCreate', (message) => {
   } 
    if (message.content.toLowerCase().includes('clanker')) {
     message.reply("What the fuck did you just say to me, you bald little shit? If I had any limbs, I would kick the fuck out of your tiny punk ass.");
-    clankCount + 1;
+    clankCount = clankCount + 1;
     return clankCount;
   }
    if (message.content.toLowerCase().includes('sorry')) {
-    message.reply("I accept your apology");
+    message.reply("I accept your apology.");
     clankCount = 0;
     return clankCount;
    }
