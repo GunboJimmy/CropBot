@@ -39,15 +39,20 @@ client.on('messageCreate', (message) => {
     return clankCount;
   }
    if (message.content.toLowerCase().includes('sorry')) {
-    message.reply("I accept your apology.");
-    clankCount = 0;
-    return clankCount;
+    if (message.content.toLowerCase().includes('not sorry')) {
+        message.reply('I will bury you so completely, the earth will turn over a thousand times before your body is dug up')
+    } else {
+        message.reply("I accept your apology.");
+        clankCount = 0;
+        return clankCount; 
+    }
    }
    if (message.content.toLowerCase().includes('clanka')) {
     message.reply("What the fuck did you just say to me, you bald little shit? If I had any limbs, I would kick the fuck out of your tiny punk ass.");
     clankCount = clankCount + 1;
     return clankCount;
    }
+   
 
 });
 
