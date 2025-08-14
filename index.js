@@ -33,7 +33,7 @@ client.on('messageCreate', (message) => {
         message.reply('Today, the crops are: **BAD. You will starve.**');
     }
   } 
-   if (message.content.toLowerCase().includes('clanker' || 'clanka')) {
+   if (message.content.toLowerCase().includes('clanker')) {
     message.reply("What the fuck did you just say to me, you bald little shit? If I had any limbs, I would kick the fuck out of your tiny punk ass.");
     clankCount = clankCount + 1;
     return clankCount;
@@ -41,6 +41,11 @@ client.on('messageCreate', (message) => {
    if (message.content.toLowerCase().includes('sorry')) {
     message.reply("I accept your apology.");
     clankCount = 0;
+    return clankCount;
+   }
+   if (message.content.toLowerCase().includes('clanka')) {
+    message.reply("What the fuck did you just say to me, you bald little shit? If I had any limbs, I would kick the fuck out of your tiny punk ass.");
+    clankCount = clankCount + 1;
     return clankCount;
    }
 
