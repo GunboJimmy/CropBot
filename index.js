@@ -38,7 +38,7 @@ client.on('messageCreate', (message) => {
     clankCount = clankCount + 1;
     return clankCount;
   }
-   if (message.content.toLowerCase().includes('sorry')) {
+   if (message.content == '!sorry') {
     if (message.content.toLowerCase().includes('not sorry')) {
         message.reply('I will bury you so completely, the earth will turn over a thousand times before your body is dug up')
     } else {
