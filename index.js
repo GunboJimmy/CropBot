@@ -53,7 +53,7 @@ client.on('messageCreate', (message) => {
     return clankCount;
    }
    if (message.content == '!evilcropcheck') {
-    let cropRoll = Math.floor(Math.random() * 1) + 1;
+    let cropRoll = Math.floor(Math.random() * 1226) + 1;
     if (clankCount >= 2) {
         message.reply('Today, the evil crops are: **Go fuck yourself.**');
     } else if (cropRoll == 1000) {
@@ -75,7 +75,7 @@ client.on('messageCreate', (message) => {
     } else {
         message.reply('Today, the evil crops are: **Forever lost in a sea of endless sorrow.**');
     }
-  } 
+  }
 
 });
 
