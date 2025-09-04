@@ -12,11 +12,19 @@ client.once('ready', () => {
 
 client.on('messageCreate', (message) => {
   if (message.content == '!cropcheck') {
-    let cropRoll = Math.floor(Math.random() * 1226) + 1;
+    let cropRoll = Math.floor(Math.random() * 11226) + 1;
     if (clankCount >= 2) {
         message.reply('Today, the crops are: **Go fuck yourself.**');
     } else if (cropRoll == 1000) {
         message.reply('Today, the crops are: **Whirring and humming, whirring and humming, whirring and humming, whirring and humming. Will this noise never end? Nothing but noise, noise, enternal noise! Dancing and prancing and shouting and laughing and crying and snorting and snivelling. Animals! All of them! Animals!**');
+    } else if (cropRoll == 1230) {
+        message.reply('Today, the crops are: **Forgotten.**');
+    } else if (cropRoll == 2147) {
+        message.reply('Today, the crops are: **Accidentally overflowing the 32 bit integer limit');
+    } else if (cropRoll == 386) {
+        message.reply('Today, the crops are: **Croation**');
+    } else if (cropRoll == 708) {
+        message.reply('Today, the crops are: **Divorced.**');
     } else if (cropRoll == 1225) {
         message.reply('Today, the crops are: **Find Her.**');
     } else if (cropRoll == 1) {
@@ -53,13 +61,17 @@ client.on('messageCreate', (message) => {
     return clankCount;
    }
    if (message.content == '!evilcropcheck') {
-    let cropRoll = Math.floor(Math.random() * 1226) + 1;
+    let cropRoll = Math.floor(Math.random() * 11226) + 1;
     if (clankCount >= 2) {
         message.reply('Today, the evil crops are: **Go fuck yourself.**');
     } else if (cropRoll == 1000) {
         message.reply('Today, the evil crops are: **Whirring and humming, whirring and humming, whirring and humming, whirring and humming. Will this noise never end? Nothing but noise, noise, enternal noise! Dancing and prancing and shouting and laughing and crying and snorting and snivelling. Animals! All of them! Animals!**');
     } else if (cropRoll == 1225) {
         message.reply('Today, the evil crops are: **Find Her.**');
+    } else if (cropRoll == 1230) {
+        message.reply('Today, the evil crops are: **Forgotten.**');
+    } else if (cropRoll == 386) {
+        message.reply('Today, the evil crops are: **In a sunless place.**');
     } else if (cropRoll == 1) {
         message.reply('Today, the evil crops are: \n **saffron skies raise the blazing sun \n a chance encounter, awkward displays \n one day, my love, we\'d be as one \n with two entwined. A set course, begun \n that frenetic, wild, lustrous haze; \n azure skies host the radiant sun \n above us beaming as we run \n down that aisle, a fervent craze \n that day, my love, we became as one \n with future unfolded - the life we\'d won \n commitment and duty, for the family we\'d raise \n cerulean skies ferry the shimmering sun \n Buried. Shackled by fate - overrun \n by ever-growing resent and malaise \n yesterday, my love, we were as one \n now you lie here, the life in you gone \n in the dark outside of her rays \n crimson skies bear the torch; our sun \n today, my love, we\'ll be as one**');
     } else if (cropRoll == 75) {
