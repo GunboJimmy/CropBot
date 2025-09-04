@@ -22,7 +22,7 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll == 2147) {
         message.reply('Today, the crops are: **Accidentally overflowing the 32 bit integer limit');
     } else if (cropRoll == 386) {
-        message.reply('Today, the crops are: **Croation**');
+        message.reply('Today, the crops are: **Croation.**');
     } else if (cropRoll == 708) {
         message.reply('Today, the crops are: **Divorced.**');
     } else if (cropRoll == 1225) {
@@ -34,7 +34,7 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll % 4 == 1) {
         message.reply('Today, the crops are: **Thriving**');
     } else if (cropRoll % 4 == 2) {
-        message.reply('Today, the crops are: **Tired of hearing about Silksong**');
+        message.reply('Today, the crops are: **Tired of hearing about Silksong.**');
     } else if (cropRoll % 4 == 3) {
         message.reply('Today, the crops are: **Average**');
     } else {
