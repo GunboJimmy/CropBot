@@ -34,7 +34,7 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll % 4 == 1) {
         message.reply('Today, the crops are: **Thriving**');
     } else if (cropRoll % 4 == 2) {
-        message.reply('Today, the crops are: **Tired of hearing about Silksong.**');
+        message.reply('Today, the crops are: **Withering.**');
     } else if (cropRoll % 4 == 3) {
         message.reply('Today, the crops are: **Average**');
     } else {
