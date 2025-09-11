@@ -34,7 +34,7 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll % 4 == 1) {
         message.reply('Today, the crops are: **Thriving**');
     } else if (cropRoll % 4 == 2) {
-        message.reply('Today, the crops are: **Withering.**');
+        message.reply('Today, the crops are: **They hit the second tower.**');
     } else if (cropRoll % 4 == 3) {
         message.reply('Today, the crops are: **Average**');
     } else {
@@ -81,7 +81,7 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll % 4 == 1) {
         message.reply('Today, the evil crops are: **Burning.**');
     } else if (cropRoll % 4 == 2) {
-        message.reply('Today, the evil crops are: **Atoning for a lifetime of sins.**');
+        message.reply('Today, the evil crops are: **Fighting in the Middle East.**');
     } else if (cropRoll % 4 == 3) {
         message.reply('Today, the evil crops are: **Without peace.**');
     } else {
