@@ -34,7 +34,7 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll % 4 == 1) {
         message.reply('Today, the crops are: **Thriving**');
     } else if (cropRoll % 4 == 2) {
-        message.reply('Today, the crops are: **They hit the second tower.**');
+        message.reply('Today, the crops are: **Withering.**');
     } else if (cropRoll % 4 == 3) {
         message.reply('Today, the crops are: **Average**');
     } else {
@@ -78,12 +78,14 @@ client.on('messageCreate', (message) => {
         message.reply('Today, the evil crops are: **You don\'t have a lot of time, you\'ll need to get away quickly. Go back to the lake, go into the water, look into their eyes. It\'s your friends, your classmates. You took the trip to the lake in the fall of \'75, together, when you were young. Don\'t you remember? Look into their eyes. I know you can hear them talking to you, just like they talked to me. Don\'t let them tell you it\'s just a cognitohazard. This was their fault, they caused this. We were all innocent kids, don\'t you remember? And you just got away, you and I? The rest of them are at the bottom of that lake, waiting for us to go back to them and be whole together again. They want us to know. They want us to remember. Wake up, goddammit. Remember the fall of \'75. The year we were supposed to graduate. Don\'t let them make you forget. They\'re calling to you, can\'t you hear them?**')
     } else if (cropRoll == 115) {
         message.reply('Today, the evil crops are: **Hereafter.**')
-    } else if (cropRoll % 4 == 1) {
+    } else if (cropRoll % 5 == 1) {
         message.reply('Today, the evil crops are: **Burning.**');
-    } else if (cropRoll % 4 == 2) {
-        message.reply('Today, the evil crops are: **Fighting in the Middle East.**');
-    } else if (cropRoll % 4 == 3) {
+    } else if (cropRoll % 5 == 2) {
+        message.reply('Today, the evil crops are: **Atoning for a Lifetime of Sins.**');
+    } else if (cropRoll % 5 == 3) {
         message.reply('Today, the evil crops are: **Without peace.**');
+    } else if (cropRoll % 5 == 4) {
+        message.reply('Today, the evil crops are: **Why the fuck do you need to know?**');
     } else {
         message.reply('Today, the evil crops are: **Forever lost in a sea of endless sorrow.**');
     }
