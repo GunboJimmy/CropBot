@@ -96,6 +96,18 @@ client.on('messageCreate', (message) => {
   if (message.content.toLowerCase() == '!goodnight') {
     message.reply('Sweet Dreams, ' + username);
   }
+  if (message.content.toLowerCase() == '!cropczech') {
+    let cropRoll = Math.floor(Math.random() * 1125) + 1;
+    if (cropRoll % 4 == 1) {
+        message.reply('Today, the Czech crops are: **Dealing with the socio-economic ramifications of a post-soviet world.**');
+    } else if (cropRoll % 4 == 2) {
+        message.reply('Today, the Czech crops are: **Good little comrades.**'); 
+    } else if (cropRoll % 4 == 3) {
+        message.reply('Today, the Czech crops are: **Rapidly militarising.**');
+    } else {
+        message.reply('Today, the Czech crops are: **Starving.**');
+    }
+  }
 
 });
 
