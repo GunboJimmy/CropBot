@@ -11,6 +11,7 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', (message) => {
+    const username = message.author.username;
   if (message.content == '!cropcheck') {
     let cropRoll = Math.floor(Math.random() * 11226) + 1;
     if (clankCount >= 2) {
@@ -89,6 +90,9 @@ client.on('messageCreate', (message) => {
     } else {
         message.reply('Today, the evil crops are: **Forever lost in a sea of endless sorrow.**');
     }
+  }
+  if (message.content.toLowerCase() == '!goodnight') {
+    message.reply('Sweet dreams, ' + username);
   }
 
 });
