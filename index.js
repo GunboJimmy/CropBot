@@ -94,7 +94,7 @@ client.on('messageCreate', (message) => {
     }
   }
   if (message.content.toLowerCase() == '!goodnight') {
-    message.reply('Sweet dreams, ' + username);
+    message.reply('Sweet Dreams, ' + username);
   }
 
 });
