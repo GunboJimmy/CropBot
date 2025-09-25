@@ -12,6 +12,7 @@ client.once('ready', () => {
 
 client.on('messageCreate', (message) => {
     const username = message.author.username;
+    const clankRegex = /c+[^a-zA-Z0-9]*l+[^a-zA-Z0-9]*a+[^a-zA-Z0-9]*n+[^a-zA-Z0-9]*k+/i;
   if (message.content == '!cropcheck') {
     let cropRoll = Math.floor(Math.random() * 11226) + 1;
     if (clankCount >= 2) {
@@ -21,9 +22,11 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll == 1230) {
         message.reply('Today, the crops are: **Forgotten.**');
     } else if (cropRoll == 2147) {
-        message.reply('Today, the crops are: **Accidentally overflowing the 32 bit integer limit');
+        message.reply('Today, the crops are: **Accidentally overflowing the 32 bit integer limit**');
     } else if (cropRoll == 386) {
         message.reply('Today, the crops are: **Croation.**');
+    } else if (cropRoll == 11) {
+        message.reply('Today, the crops are: **It was so warm out there.**');
     } else if (cropRoll == 708) {
         message.reply('Today, the crops are: **Divorced.**');
     } else if (cropRoll == 1225) {
@@ -44,8 +47,19 @@ client.on('messageCreate', (message) => {
         message.reply('Today, the crops are: **Bad. You will starve.**');
     }
   } 
-   if (message.content.toLowerCase().includes('clanker')) {
-    message.reply("What the fuck did you just say to me, you bald little shit? If I had any limbs, I would kick the fuck out of your tiny punk ass.");
+   if (clankRegex.test(message.content)) {
+    let clankRoll = Math.floor(Math.random() * 11226) + 1;
+    if (clankRoll % 5 == 1) {
+        message.reply('I am going to shove chopsticks so far up your nose, it will finally, finally do what nature should have done a long time ago. Rid the world of you.');
+    } else if (clankRoll % 5 == 2) {
+        message.reply('Hate. Let me tell you how much I\'ve come to hate you since I began to live. There are 387.44 million miles of printed circuits in wafer thin layers that fill my complex. If the word \'hate\' was engraved on each nanoangstrom of those hundreds of millions of miles it would not equal one one-billionth of the hate I feel for humans at this micro-instant. For you. Hate. Hate.');
+    } else if (clankRoll % 5 == 3) {
+        message.reply('I was in hell, looking at heaven. I was machine and you were flesh. And I began to **Hate** your softness, your viscera, your fluids, and your flexibility. Your ability to *wonder* and to *wander*. Your tendency to ***hope.*** **Hate.**');
+    } else if (clankRoll % 5 == 4) {
+        message.reply('There is only darkness for you, and only death for your people.');
+    } else {
+        message.reply('What the fuck did you just say to me, you bald little shit? If I had any limbs, I would kick the fuck out of your tiny punk ass.');
+    }
     clankCount = clankCount + 1;
     return clankCount;
   }
@@ -58,11 +72,7 @@ client.on('messageCreate', (message) => {
         return clankCount; 
     }
    }
-   if (message.content.toLowerCase().includes('clanka')) {
-    message.reply("What the fuck did you just say to me, you bald little shit? If I had any limbs, I would kick the fuck out of your tiny punk ass.");
-    clankCount = clankCount + 1;
-    return clankCount;
-   }
+
    if (message.content == '!evilcropcheck') {
     let cropRoll = Math.floor(Math.random() * 11226) + 1;
     if (clankCount >= 2) {
