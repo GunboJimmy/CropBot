@@ -154,15 +154,15 @@ client.on('messageCreate', (message) => {
 
 
    const media = [
-    "https://imgur.com/gallery/1OwkU5C",
-    "https://imgur.com/gallery/xfUJOSG",
-    "https://imgur.com/gallery/W7oQqkf",
+    "https://i.imgur.com/1mt2X4O.jpeg",
+    "https://i.imgur.com/JYqE5S1.mp4",
+    "https://i.imgur.com/ekv8iaH.mp4",
 
   ]
-  
+
  if (content.includes("alien")) {
     message.reply({files: [media[1]]});
- } else if (content.includes("Imogen's Favorite Video")) {
+ } else if (content.includes("bonk")) {
     message.reply({files: [media[2]]}) ;
  } else if (content.includes("knobber")) {
     message.reply({files: [media[3]]});
