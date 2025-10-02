@@ -159,6 +159,7 @@ client.on('messageCreate', (message) => {
     "https://imgur.com/gallery/W7oQqkf",
 
   ]
+  
  if (content.includes("alien")) {
     message.reply({files: [media[1]]});
  } else if (content.includes("Imogen's Favorite Video")) {
