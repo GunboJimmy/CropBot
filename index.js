@@ -12,7 +12,14 @@ client.once('ready', () => {
 
 client.on('messageCreate', (message) => {
     const username = message.author.username;
+    const userID = message.author.id;
+    const content = message.content.toLowerCase();
     const clankRegex = /c+[^a-zA-Z0-9]*l+[^a-zA-Z0-9]*a+[^a-zA-Z0-9]*n+[^a-zA-Z0-9]*k+/i;
+
+
+
+
+
   if (message.content == '!cropcheck') {
     let cropRoll = Math.floor(Math.random() * 11226) + 1;
     if (clankCount >= 2) {
@@ -47,6 +54,11 @@ client.on('messageCreate', (message) => {
         message.reply('Today, the crops are: **Bad. You will starve.**');
     }
   } 
+
+
+
+
+  
    if (clankRegex.test(message.content)) {
     let clankRoll = Math.floor(Math.random() * 11226) + 1;
     if (clankRoll % 5 == 1) {
@@ -63,6 +75,11 @@ client.on('messageCreate', (message) => {
     clankCount = clankCount + 1;
     return clankCount;
   }
+
+
+
+
+
    if (message.content.toLowerCase().includes('sorry')) {
     if (message.content.toLowerCase().includes('not sorry')) {
         message.reply('I will bury you so completely, the earth will turn over a thousand times before your body is dug up')
@@ -72,6 +89,11 @@ client.on('messageCreate', (message) => {
         return clankCount; 
     }
    }
+
+
+
+
+
 
    if (message.content == '!evilcropcheck') {
     let cropRoll = Math.floor(Math.random() * 11226) + 1;
@@ -103,9 +125,20 @@ client.on('messageCreate', (message) => {
         message.reply('Today, the evil crops are: **Forever lost in a sea of endless sorrow.**');
     }
   }
+
+
+
+
+
   if (message.content.toLowerCase() == '!goodnight') {
     message.reply('Sweet Dreams, ' + username);
   }
+
+
+
+
+
+
   if (message.content.toLowerCase() == '!cropczech') {
     let cropRoll = Math.floor(Math.random() * 1125) + 1;
     if (cropRoll % 4 == 1) {
@@ -119,6 +152,23 @@ client.on('messageCreate', (message) => {
     }
   }
 
+
+   const media = {
+    alien: "https://imgur.com/gallery/1OwkU5C",
+    imogensFavouriteVideo: "https://imgur.com/gallery/xfUJOSG",
+    angryKnobber: "https://imgur.com/gallery/W7oQqkf",
+
+   }
+ if (content.includes("alien")) {
+    message.reply({files: [media[alien]]});
+ } else if (content.includes("Imogen's Favorite Video")) {
+    message.reply({files: [media[imogensFavouriteVideo]]}) ;
+ } else if (content.includes("knobber")) {
+    message.reply({files: [media[angryKnobber]]});
+ }
+
+
+  
 });
 
 client.login(TOKEN);
