@@ -161,11 +161,11 @@ client.on('messageCreate', (message) => {
   ]
 
  if (content.includes("alien")) {
-    message.reply({files: [media[1]]});
+    message.reply({files: [media[0]]});
  } else if (content.includes("bonk")) {
-    message.reply({files: [media[2]]}) ;
+    message.reply({files: [media[1]]}) ;
  } else if (content.includes("knobber")) {
-    message.reply({files: [media[3]]});
+    message.reply({files: [media[2]]});
  }
 
 
