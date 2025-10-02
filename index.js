@@ -157,6 +157,10 @@ client.on('messageCreate', (message) => {
     "https://i.imgur.com/1mt2X4O.jpeg",
     "https://i.imgur.com/JYqE5S1.mp4",
     "https://i.imgur.com/ekv8iaH.mp4",
+    "https://i.imgur.com/zGx8zwL.jpeg",
+    "https://i.imgur.com/E5ZF3jB.jpeg",
+    "https://i.imgur.com/xsncCcc.mp4",
+    "https://i.imgur.com/xkh9Yz3.mp4"
 
   ]
 
@@ -166,6 +170,14 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[1]]}) ;
  } else if (content.includes("knobber")) {
     message.reply({files: [media[2]]});
+ } else if (content.includes("sex")) {
+    message.reply({files: [media[3]]});
+ } else if (content.includes("warm")) {
+    message.reply({files: [media[4]]});
+ } else if (content.includes("mango")) {
+    message.reply({files: [media[5]]});
+ } else if (content.includes("the architect and the builder")) {
+    message.reply({files: [media[6]]});
  }
 
 
