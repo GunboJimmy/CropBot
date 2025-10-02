@@ -153,18 +153,18 @@ client.on('messageCreate', (message) => {
   }
 
 
-   const media = {
-    alien: "https://imgur.com/gallery/1OwkU5C",
-    imogensFavouriteVideo: "https://imgur.com/gallery/xfUJOSG",
-    angryKnobber: "https://imgur.com/gallery/W7oQqkf",
+   const media = [
+    "https://imgur.com/gallery/1OwkU5C",
+    "https://imgur.com/gallery/xfUJOSG",
+    "https://imgur.com/gallery/W7oQqkf",
 
-   }
+  ]
  if (content.includes("alien")) {
-    message.reply({files: [media[alien]]});
+    message.reply({files: [media[1]]});
  } else if (content.includes("Imogen's Favorite Video")) {
-    message.reply({files: [media[imogensFavouriteVideo]]}) ;
+    message.reply({files: [media[2]]}) ;
  } else if (content.includes("knobber")) {
-    message.reply({files: [media[angryKnobber]]});
+    message.reply({files: [media[3]]});
  }
 
 
