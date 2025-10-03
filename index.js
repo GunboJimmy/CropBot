@@ -176,7 +176,7 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[4]]});
  } else if (content.includes("mango")) {
     message.reply({files: [media[5]]});
- } else if (content.includes("the architect and the builder")) {
+ } else if (content.includes("architect") || content.includes("builder")) {
     message.reply({files: [media[6]]});
  }
 
