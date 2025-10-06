@@ -160,7 +160,10 @@ client.on('messageCreate', (message) => {
     "https://i.imgur.com/zGx8zwL.jpeg",
     "https://i.imgur.com/E5ZF3jB.jpeg",
     "https://i.imgur.com/xsncCcc.mp4",
-    "https://i.imgur.com/xkh9Yz3.mp4"
+    "https://i.imgur.com/xkh9Yz3.mp4",
+    "https://i.imgur.com/OZV0r9m.mp4",
+    "https://i.imgur.com/UVh0RXq.mp4",
+    
 
   ]
 
@@ -178,6 +181,10 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[5]]});
  } else if (content.includes("architect") || content.includes("builder")) {
     message.reply({files: [media[6]]});
+ } else if (content.includes("fish")) {
+    message.reply({files: [media[7]]});
+ } else if (content.includes("inside out")) {
+    message.reply({files: [media[8]]});
  }
 
 
