@@ -163,7 +163,7 @@ client.on('messageCreate', (message) => {
     "https://i.imgur.com/xkh9Yz3.mp4",
     "https://i.imgur.com/OZV0r9m.mp4",
     "https://i.imgur.com/UVh0RXq.mp4",
-    
+    "https://i.imgur.com/2G7KSJg.mp4",
 
   ]
 
@@ -185,6 +185,8 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[7]]});
  } else if (content.includes("inside out")) {
     message.reply({files: [media[8]]});
+ } else if (content.includes("bigweld")) {
+    message.reply({files: [media[9]]});
  }
 
 
