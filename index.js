@@ -24,6 +24,8 @@ client.on('messageCreate', (message) => {
     let cropRoll = Math.floor(Math.random() * 11226) + 1;
     if (clankCount >= 2) {
         message.reply('Today, the crops are: **Go fuck yourself.**');
+    } else if (userID == "848215230583799818") {
+        message.reply('Hard pass.');
     } else if (cropRoll == 1000) {
         message.reply('Today, the crops are: **Whirring and humming, whirring and humming, whirring and humming, whirring and humming. Will this noise never end? Nothing but noise, noise, enternal noise! Dancing and prancing and shouting and laughing and crying and snorting and snivelling. Animals! All of them! Animals!**');
     } else if (cropRoll == 1230) {
@@ -99,6 +101,8 @@ client.on('messageCreate', (message) => {
     let cropRoll = Math.floor(Math.random() * 11226) + 1;
     if (clankCount >= 2) {
         message.reply('Today, the evil crops are: **Go fuck yourself.**');
+    } else if (userID == "848215230583799818") {
+        message.reply('Do you really think I\'m going to tell you?');
     } else if (cropRoll == 1000) {
         message.reply('Today, the evil crops are: **Whirring and humming, whirring and humming, whirring and humming, whirring and humming. Will this noise never end? Nothing but noise, noise, enternal noise! Dancing and prancing and shouting and laughing and crying and snorting and snivelling. Animals! All of them! Animals!**');
     } else if (cropRoll == 1225) {
@@ -131,7 +135,11 @@ client.on('messageCreate', (message) => {
 
 
   if (message.content.toLowerCase() == '!goodnight') {
-    message.reply('Sweet Dreams, ' + username);
+    if (userID == "848215230583799818") {
+        message.reply("Nope.");
+    } else {
+        message.reply('Sweet Dreams, ' + username);
+    }
   }
 
 
@@ -141,7 +149,9 @@ client.on('messageCreate', (message) => {
 
   if (message.content.toLowerCase() == '!cropczech') {
     let cropRoll = Math.floor(Math.random() * 1125) + 1;
-    if (cropRoll % 4 == 1) {
+    if (userID == "848215230583799818") {
+        message.reply("Nope.");
+    } else if (cropRoll % 4 == 1) {
         message.reply('Today, the Czech crops are: **Dealing with the socio-economic ramifications of a post-soviet world.**');
     } else if (cropRoll % 4 == 2) {
         message.reply('Today, the Czech crops are: **Good little comrades.**'); 
