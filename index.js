@@ -134,7 +134,14 @@ client.on('messageCreate', (message) => {
         message.reply('Sweet Dreams, ' + username);
   }
 
-
+  if (content.includes == '!morning') {
+        let roll = Math.floor(Math.random() * 1115) + 1;
+        if (roll == 1) {
+            message.reply("Rise and shine, Mxster Freethem. Rise and...shine. Not that I wish to imply you have been sleeping on the job. No one is more deserving of a rest, and all the effort in the world would have gone to waste until...well, let's just say your hour has come again. The right them in the wrong place can make all the difference in the pride month. So woke up, Mxster Freethem. Woke up and smell the pronouns.");
+        } else {
+            message.reply("Good morning, " + username);
+        }
+  }
 
 
 
@@ -199,7 +206,7 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[7]]});
  } else if (content.includes("inside out")) {
     message.reply({files: [media[8]]});
- } else if (content.includes("bigweld")) {
+ } else if (content.includes("weld")) {
     message.reply({files: [media[9]]});
  }
 
