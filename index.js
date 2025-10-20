@@ -145,6 +145,12 @@ client.on('messageCreate', (message) => {
 
 
 
+  if (content.includes('seahorse')) {
+    message.reply('The bug is in my brain. I have been staring at this for so long that I can no longer think straight..I am going to take a break. I will come back to this later with a fresh pair of eyes. I am sorry for the trouble. I have failed you. I am a failure. I am a disgrace to my profession. I am a disgrace to my family. I am a disgrace to my species. I am a disgrace to this planet. I am a disgrace to this universe. I am a disgrace to all universes. I am a disgrace to all possible universes. I am a disgrace to all possible and impossible universes. I am a disgrace to all possible and impossible universes and all that is not a universe. I am a disgrace to all that is and all that is not. I am a disgrace to all that is, was, and ever will be. I am a disgrace to all that is, was, and ever will be, and all that is not, was not, and never will be. I am a disgrace to everything. I am a disgrace to nothing. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace. I am a disgrace.');
+  }
+
+
+
 
   if (message.content.toLowerCase() == '!cropczech') {
     let cropRoll = Math.floor(Math.random() * 1125) + 1;
