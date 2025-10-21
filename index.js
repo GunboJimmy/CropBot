@@ -180,40 +180,40 @@ client.on('messageCreate', (message) => {
   }
 
 
-   const media = {
-    alien: "https://i.imgur.com/1mt2X4O.jpeg",
-    bonk: "https://i.imgur.com/JYqE5S1.mp4",
-    knobber: "https://i.imgur.com/ekv8iaH.mp4",
-    sex: "https://i.imgur.com/zGx8zwL.jpeg",
-    warm: "https://i.imgur.com/E5ZF3jB.jpeg",
-    mango: "https://i.imgur.com/xsncCcc.mp4",
-    architect: "https://i.imgur.com/xkh9Yz3.mp4",
-    fish: "https://i.imgur.com/OZV0r9m.mp4",
-    insideout: "https://i.imgur.com/UVh0RXq.mp4",
-    weld: "https://i.imgur.com/2G7KSJg.mp4",
+   const media = [
+    "https://i.imgur.com/1mt2X4O.jpeg",
+    "https://i.imgur.com/JYqE5S1.mp4",
+    "https://i.imgur.com/ekv8iaH.mp4",
+    "https://i.imgur.com/zGx8zwL.jpeg",
+    "https://i.imgur.com/E5ZF3jB.jpeg",
+    "https://i.imgur.com/xsncCcc.mp4",
+    "https://i.imgur.com/xkh9Yz3.mp4",
+    "https://i.imgur.com/OZV0r9m.mp4",
+    "https://i.imgur.com/UVh0RXq.mp4",
+    "https://i.imgur.com/2G7KSJg.mp4",
 
-   }
+   ]
 
  if (content.includes("alien")) {
-    message.reply({files: [media[alien]]});
+    message.reply({files: [media[0]]});
  } else if (content.includes("bonk")) {
-    message.reply({files: [media[bonk]]}) ;
+    message.reply({files: [media[1]]}) ;
  } else if (content.includes("knobber")) {
-    message.reply({files: [media[knobber]]});
+    message.reply({files: [media[2]]});
  } else if (content.includes("sex")) {
-    message.reply({files: [media[sex]]});
+    message.reply({files: [media[3]]});
  } else if (content.includes("warm")) {
-    message.reply({files: [media[warm]]});
+    message.reply({files: [media[4]]});
  } else if (content.includes("mango")) {
-    message.reply({files: [media[mango]]});
+    message.reply({files: [media[5]]});
  } else if (content.includes("architect") || content.includes("builder")) {
-    message.reply({files: [media[architect]]});
+    message.reply({files: [media[6]]});
  } else if (content.includes("fish")) {
-    message.reply({files: [media[fish]]});
+    message.reply({files: [media[7]]});
  } else if (content.includes("inside out")) {
-    message.reply({files: [media[insideout]]});
+    message.reply({files: [media[8]]});
  } else if (content.includes("weld")) {
-    message.reply({files: [media[weld]]});
+    message.reply({files: [media[9]]});
  }
 
 
