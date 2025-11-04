@@ -179,6 +179,10 @@ client.on('messageCreate', (message) => {
     }
   }
 
+  if (content == "!cripcheck") {
+    message.reply('# Piss off, Cohen');
+  }
+
 
    const media = [
     "https://i.imgur.com/1mt2X4O.jpeg",
