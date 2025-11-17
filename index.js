@@ -298,7 +298,7 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[18]]});
  } else if (content.includes("the wizard")) {
     message.reply({files: [media[19]]});
- } else if (content.includees("the bog")) {
+ } else if (content.includes("the bog")) {
     message.reply({files: [media[20]]});
  } else if (content.includes("drunk")) {
     message.reply({files: [media[21]]});
