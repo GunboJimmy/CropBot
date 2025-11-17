@@ -75,7 +75,7 @@ client.on('messageCreate', (message) => {
     } else {
         message.reply('What the fuck did you just say to me, you bald little shit? If I had any limbs, I would kick the fuck out of your tiny punk ass.');
     }
-    clankCount = clankCount + 1;
+    clankCount++;
     return clankCount;
   }
 
@@ -228,17 +228,31 @@ client.on('messageCreate', (message) => {
 
 
    const media = [
-    "https://i.imgur.com/1mt2X4O.jpeg",
-    "https://i.imgur.com/JYqE5S1.mp4",
-    "https://i.imgur.com/ekv8iaH.mp4",
-    "https://i.imgur.com/zGx8zwL.jpeg",
-    "https://i.imgur.com/E5ZF3jB.jpeg",
-    "https://i.imgur.com/xsncCcc.mp4",
-    "https://i.imgur.com/xkh9Yz3.mp4",
-    "https://i.imgur.com/OZV0r9m.mp4",
-    "https://i.imgur.com/UVh0RXq.mp4",
-    "https://i.imgur.com/2G7KSJg.mp4",
-
+    "https://i.imgur.com/1mt2X4O.jpeg", //alien 0
+    "https://i.imgur.com/JYqE5S1.mp4", //my favourite video 1
+    "https://i.imgur.com/ekv8iaH.mp4", //angry knobber 2 
+    "https://i.imgur.com/zGx8zwL.jpeg", //Sexual orientation 3
+    "https://i.imgur.com/E5ZF3jB.jpeg", //It was so warm out there 4
+    "https://i.imgur.com/xsncCcc.mp4", //mango 5 
+    "https://i.imgur.com/xkh9Yz3.mp4", //The Architect and The Builder 6
+    "https://i.imgur.com/OZV0r9m.mp4", //Fishes 7
+    "https://i.imgur.com/UVh0RXq.mp4", //Inside Out 2 8
+    "https://i.imgur.com/2G7KSJg.mp4", //Bigweld 9
+    "https://i.imgur.com/Y5PNUQN.mp4", //Longweld 10
+    "https://i.imgur.com/QyO2NeF.png", //RISE 11
+    "https://i.imgur.com/4KEnYP4.png", //I THINK I'M ADDICTED TO CALCULUS 12
+    "https://i.imgur.com/2S9RLNI.jpeg", //I'M UP CRUNCHING NUMBERS 13 
+    "https://i.imgur.com/ztp9wPk.png", //Nucleotides 14
+    "https://i.imgur.com/WxIPpdW.jpeg", //Oops 15
+    "https://i.imgur.com/jcPOCk5.png", //Diamond Dave 16
+    "https://i.imgur.com/jnPhRVW.mp4", //The World 17
+    "https://i.imgur.com/Qxded9f.mp4", //Basketball 18
+    "https://i.imgur.com/k5vnpk2.png", //The Wizard 19
+    "https://i.imgur.com/TlePlbL.png", //The Bog 20
+    "https://i.imgur.com/QQWAScf.jpeg", //Gods Drunkest Driver 21
+    "https://i.imgur.com/dOHS9Sg.png", //Tim Gamer 22
+    "https://i.imgur.com/FG37Xhn.png", //THAT'S WHAT HE DOES!!!! 23
+    "https://i.imgur.com/b2mQTCS.mp4", //The Orb has decided to grant you mercy 24
    ]
 
  if (content.includes("alien")) {
@@ -260,7 +274,40 @@ client.on('messageCreate', (message) => {
  } else if (content.includes("inside out")) {
     message.reply({files: [media[8]]});
  } else if (content.includes("weld")) {
-    message.reply({files: [media[9]]});
+    let weldRoll = Math.floor(Math.random() * 10) + 1;
+    if (weldRoll == 1) {
+        message.reply({files: [media[10]]});
+    } else {
+        message.reply({files: [media[9]]});
+    }
+ } else if (content.includes("rise")) {
+    message.reply({files: [media[11]]});
+ } else if (content.includes("calculus")) {
+    message.reply({files: [media[12]]});
+ } else if (content.includes("numbers")) {
+    message.reply({files: [media[13]]}); 
+ } else if (content.includes("jojo")) {
+    message.reply({files: [media[14]]});
+ } else if (content.includes("mistake")) {
+    message.reply({files: [media[15]]});
+ } else if (content.includes("dave")) {
+    message.reply({files: [media[16]]});
+ } else if (content.includes("the world")) {
+    message.reply({files: [media[17]]});
+ } else if (content.includes("basketball")) {
+    message.reply({files: [media[18]]});
+ } else if (content.includes("the wizard")) {
+    message.reply({files: [media[19]]});
+ } else if (content.includees("the bog")) {
+    message.reply({files: [media[20]]});
+ } else if (content.includes("drunk")) {
+    message.reply({files: [media[21]]});
+ } else if (content.includes("don't fuck")) {
+    message.reply({files: [media[22]]});
+ } else if (content.includes("what he does")) {
+    message.reply({files: [media[23]]});
+ } else if (content.includes("ball")) {
+    message.reply({files: [media[24]]});
  }
 
 
