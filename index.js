@@ -253,6 +253,8 @@ client.on('messageCreate', (message) => {
     "https://i.imgur.com/dOHS9Sg.png", //Tim Gamer 22
     "https://i.imgur.com/FG37Xhn.png", //THAT'S WHAT HE DOES!!!! 23
     "https://i.imgur.com/b2mQTCS.mp4", //The Orb has decided to grant you mercy 24
+    "https://i.imgur.com/U0TzrHP.mp4", //Alienweld
+    
    ]
 
  if (content.includes("alien")) {
@@ -277,6 +279,8 @@ client.on('messageCreate', (message) => {
     let weldRoll = Math.floor(Math.random() * 10) + 1;
     if (weldRoll == 1) {
         message.reply({files: [media[10]]});
+    } else if (weldRoll == 2) {
+        message.reply({files: [media[25]]});
     } else {
         message.reply({files: [media[9]]});
     }
