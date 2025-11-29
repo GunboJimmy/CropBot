@@ -226,6 +226,9 @@ client.on('messageCreate', (message) => {
     message.reply('welcome to the bread bank \n we sell bread, we sell loafs \n we got bread on deck, bread on the floor \n **TOASTED** \n **ROASTED** \n shut the fuck up,listen I just need a baguette and a brioche \n we don\'t have either of those you can get the gluten free white bread or the potato bread- \n what the fuck is gluten? take that shit out \n it\'s gluten free \n *I don\'t care if it\'s free* \n swear on your fucking **YEEZYS** if you wanna fight, we gon\' fight \n tryna be on ***WORLDSTAR?*** \n what, you gon\' record it? \n yeah, I got my dollar store camera **ON** \n ***what\'s the fucking SITUAAAAAAAATION?*** \n **what the fuck do you want?** \n# I’m the motherfucking MANAGER \n at the BREAD STORE? \n# B R E A D \n tell him to take the motherfucking gluten **OUT THE BREAD** \n Imma need you to shut that bullshit up chief, we can\'t take shit out the bread \n why put it in in the first place? **I know y\'all smoking that pack**  \n we got crackers, no gluten \n ***fuck crackers.*** \n it\'s gluten free, you want the gluten or nah? \n hell no, you better take the gluten out that damn shit \n look, we got whole wheat: gluten free; Texas toast: gluten free \n# TORTILLA \n ***fuck all that*** \n what **bitchass country** are y\'all from **where they got this bullshit at?** \n# Florida \n# I knew it \n look, you can take this **yeast**, or I’m calling the **police** \n# I’m goin WEAST \n nah don’t call the police, I got a warrant \n honestly, fuck y’all. I ain’t never seen nobody act like this over no bread \n what the fuck are you saying? \n All I\'m saying is fuck y\'all\'s bread, **fuck the gluten, *and fuck them crackers*** \n but the crackers don’t have gluten \n I’ll take those \n Okay that’s gonna be five dol- \n nah fuck that I ain’t paying')
   }
 
+  if (content.includes('laptop')) {
+    message.reply('Today when I walked into my economics class I saw something I dread every time I close my eyes. Someone had brought their new gaming laptop to class. The Forklift he used to bring it was still running idle at the back. I started sweating as I sat down and gazed over at the 700lb beast that was his laptop. He had already reinforced his desk with steel support beams and was in the process of finding an outlet for a power cable thicker than Amy Schumer\'s thigh. I start shaking. I keep telling myself I\'m going to be alright and that there\'s nothing to worry about. He somehow finds a fucking outlet. Tears are running down my cheeks as I send my last texts to my family saying I love them. The teacher starts the lecture, and the student turns his laptop on. The colored lights on his RGB Backlit keyboard flare to life like a nuclear flash, and a deep humming fills my ears and shakes my very soul. The entire city power grid goes dark. The classroom begins to shake as the massive fans begin to spin. In mere seconds my world has gone from vibrant life, to a dark, earth shattering void where my body is getting torn apart by the 150mph gale force winds and the 500 decibel groan of the cooling fans. As my body finally surrenders, I weep, as my school and my city go under. I fucking hate gaming laptops. ');
+  }
 
    const media = [
     "https://i.imgur.com/1mt2X4O.jpeg", //alien 0
@@ -253,8 +256,8 @@ client.on('messageCreate', (message) => {
     "https://i.imgur.com/dOHS9Sg.png", //Tim Gamer 22
     "https://i.imgur.com/FG37Xhn.png", //THAT'S WHAT HE DOES!!!! 23
     "https://i.imgur.com/b2mQTCS.mp4", //The Orb has decided to grant you mercy 24
-    "https://i.imgur.com/U0TzrHP.mp4", //Alienweld
-    
+    "https://i.imgur.com/U0TzrHP.mp4", //Alienweld 25
+    "https://i.imgur.com/B7aEtyN.mp4", //A very muscleman christmas 26"
    ]
 
  if (content.includes("alien")) {
@@ -312,6 +315,8 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[23]]});
  } else if (content.includes("ball")) {
     message.reply({files: [media[24]]});
+ } else if (content.includes("christmas")) {
+    message.reply({files: [media[26]]});
  }
 
 
