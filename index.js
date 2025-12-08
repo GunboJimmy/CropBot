@@ -15,7 +15,7 @@ client.on('messageCreate', (message) => {
     const userID = message.author.id;
     const content = message.content.toLowerCase();
     const clankRegex = /c+[^a-zA-Z0-9]*l+[^a-zA-Z0-9]*a+[^a-zA-Z0-9]*n+[^a-zA-Z0-9]*k+/i;
-
+    
     if (message.author.bot) return;
 
 
@@ -258,6 +258,8 @@ client.on('messageCreate', (message) => {
     "https://i.imgur.com/b2mQTCS.mp4", //The Orb has decided to grant you mercy 24
     "https://i.imgur.com/U0TzrHP.mp4", //Alienweld 25
     "https://i.imgur.com/B7aEtyN.mp4", //A very muscleman christmas 26"
+    "https://i.imgur.com/p1iHzro.png", //peener 27
+    "https://i.imgur.com/bipyniZ.jpeg", // sans 28
    ]
 
  if (content.includes("alien")) {
@@ -317,8 +319,15 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[24]]});
  } else if (content.includes("christmas")) {
     message.reply({files: [media[26]]});
+ } else if (content.includes("penis")) {
+    message.reply({files: [media[27]]});
  }
 
+
+let shitFuckVariableThatIHate = Math.floor(Math.random() * 100000) + 1;
+if (shitFuckVariableThatIHate == 1) {
+        message.reply({files: [media[28]]});
+}
 
   
 });
