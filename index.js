@@ -220,6 +220,116 @@ client.on('messageCreate', (message) => {
         message.reply('Today, the crip crops are: **Being arrested.**');
     }
   } 
+   if (content == "!cripczech") {
+    let cropRoll = Math.floor(Math.random() * 1125) + 1;
+    if (clankCount >= 2) {
+        message.reply('Today, the Czech crip crops are: **Go fuck yourself.**');
+    } else if (cropRoll == 1000) {
+        message.reply('Today, the Czech crip crops are: **Whirring and humming, whirring and humming, whirring and humming, whirring and humming. Will this noise never end? Nothing but noise, noise, enternal noise! Dancing and prancing and shouting and laughing and crying and snorting and snivelling. Animals! All of them! Animals!**');
+    } else if (cropRoll == 1230) {
+        message.reply('Today, the Czech crip crops are: **Forgotten.**');
+    } else if (cropRoll == 2147) {
+        message.reply('Today, the Czech crip crops are: **Accidentally overflowing the 32 bit integer limit**');
+    } else if (cropRoll == 386) {
+        message.reply('Today, the Czech crip crops are: **Croation.**');
+    } else if (cropRoll == 11) {
+        message.reply('Today, the Czech crip crops are: **It was so warm out there.**');
+    } else if (cropRoll == 708) {
+        message.reply('Today, the Czech crip crops are: **Divorced.**');
+    } else if (cropRoll == 1225) {
+        message.reply('Today, the Czech crip crops are: **Find Her.**');
+    } else if (cropRoll == 1) {
+        message.reply('Today, the Czech crip crops are: \n **Saffron skies raise the blazing sun \n a chance encounter, awkward displays \n one day, my love, we\'d be as one \n with two entwined. A set course, begun \n that frenetic, wild, lustrous haze; \n azure skies host the radiant sun \n above us beaming as we run \n down that aisle, a fervent craze \n that day, my love, we became as one \n with future unfolded - the life we\'d won \n commitment and duty, for the family we\'d raise \n cerulean skies ferry the shimmering sun \n Buried. Shackled by fate - overrun \n by ever-growing resent and malaise \n yesterday, my love, we were as one \n now you lie here, the life in you gone \n in the dark outside of her rays \n crimson skies bear the torch; our sun \n today, my love, we\'ll be as one**');
+    } else if (cropRoll == 75) {
+        message.reply('Today, the Czech crip crops are: **You don\'t have a lot of time, you\'ll need to get away quickly. Go back to the lake, go into the water, look into their eyes. It\'s your friends, your classmates. You took the trip to the lake in the fall of \'75, together, when you were young. Don\'t you remember? Look into their eyes. I know you can hear them talking to you, just like they talked to me. Don\'t let them tell you it\'s just a cognitohazard. This was their fault, they caused this. We were all innocent kids, don\'t you remember? And you just got away, you and I? The rest of them are at the bottom of that lake, waiting for us to go back to them and be whole together again. They want us to know. They want us to remember. Wake up, goddammit. Remember the fall of \'75. The year we were supposed to graduate. Don\'t let them make you forget. They\'re calling to you, can\'t you hear them?**')
+    } else if (cropRoll == 235) {
+        message.reply('Today, the Czech crip crops are: **Forgiving.**');
+    } else if (cropRoll % 5 == 1) {
+        message.reply('Today, the Czech crip crops are: **Páchání vydírání.**');
+    } else if (cropRoll % 5 == 2) {
+        message.reply('Today, the Czech crip crops are: **Způsobování chaosu.**');
+    } else if (cropRoll % 5 == 3) {
+        message.reply('Today, the Czech crip crops are: **Spáchání vraždy.**');
+    } else if (cropRoll % 5 == 4) {
+        message.reply('Today, the Czech crip crops are: **Zabíjení soupeřů.**');
+    } else {
+        message.reply('Today, the Czech crip crops are: **Zatčen.**');
+    }
+  } 
+
+   if (content == "!evilcripczech") {
+    let cropRoll = Math.floor(Math.random() * 1125) + 1;
+    if (clankCount >= 2) {
+        message.reply('Today, the evil Czech crip crops are: **Go fuck yourself.**');
+    } else if (cropRoll == 1000) {
+        message.reply('Today, the evil Czech crip crops are: **Whirring and humming, whirring and humming, whirring and humming, whirring and humming. Will this noise never end? Nothing but noise, noise, enternal noise! Dancing and prancing and shouting and laughing and crying and snorting and snivelling. Animals! All of them! Animals!**');
+    } else if (cropRoll == 1230) {
+        message.reply('Today, the evil Czech crip crops are: **Forgotten.**');
+    } else if (cropRoll == 2147) {
+        message.reply('Today, the evil Czech crip crops are: **Accidentally overflowing the 32 bit integer limit**');
+    } else if (cropRoll == 386) {
+        message.reply('Today, the evil Czech crip crops are: **Croation.**');
+    } else if (cropRoll == 11) {
+        message.reply('Today, the evil Czech crip crops are: **It was so warm out there.**');
+    } else if (cropRoll == 708) {
+        message.reply('Today, the evil Czech crip crops are: **Divorced.**');
+    } else if (cropRoll == 1225) {
+        message.reply('Today, the evil Czech crip crops are: **Find Her.**');
+    } else if (cropRoll == 1) {
+        message.reply('Today, the evil Czech crip crops are: \n **Saffron skies raise the blazing sun \n a chance encounter, awkward displays \n one day, my love, we\'d be as one \n with two entwined. A set course, begun \n that frenetic, wild, lustrous haze; \n azure skies host the radiant sun \n above us beaming as we run \n down that aisle, a fervent craze \n that day, my love, we became as one \n with future unfolded - the life we\'d won \n commitment and duty, for the family we\'d raise \n cerulean skies ferry the shimmering sun \n Buried. Shackled by fate - overrun \n by ever-growing resent and malaise \n yesterday, my love, we were as one \n now you lie here, the life in you gone \n in the dark outside of her rays \n crimson skies bear the torch; our sun \n today, my love, we\'ll be as one**');
+    } else if (cropRoll == 75) {
+        message.reply('Today, the evil Czech crip crops are: **You don\'t have a lot of time, you\'ll need to get away quickly. Go back to the lake, go into the water, look into their eyes. It\'s your friends, your classmates. You took the trip to the lake in the fall of \'75, together, when you were young. Don\'t you remember? Look into their eyes. I know you can hear them talking to you, just like they talked to me. Don\'t let them tell you it\'s just a cognitohazard. This was their fault, they caused this. We were all innocent kids, don\'t you remember? And you just got away, you and I? The rest of them are at the bottom of that lake, waiting for us to go back to them and be whole together again. They want us to know. They want us to remember. Wake up, goddammit. Remember the fall of \'75. The year we were supposed to graduate. Don\'t let them make you forget. They\'re calling to you, can\'t you hear them?**')
+    } else if (cropRoll == 235) {
+        message.reply('Today, the evil Czech crip crops are: **Forgiving.**');
+    } else if (cropRoll % 5 == 1) {
+        message.reply('Today, the evil Czech crip crops are: **Staví nemocnice**');
+    } else if (cropRoll % 5 == 2) {
+        message.reply('Today, the evil Czech crip crops are: **Pomáhají bezdomovcům.**');
+    } else if (cropRoll % 5 == 3) {
+        message.reply('Today, the evil Czech crip crops are: **Státní úředníci**');
+    } else if (cropRoll % 5 == 4) {
+        message.reply('Today, the evil Czech crip crops are: **Poctiví občané**');
+    } else {
+        message.reply('Today, the evil Czech crip crops are: **Věnováno zlepšení společnosti.**');
+    }
+  } 
+
+  if (content == "!evilcripcheck") {
+    let cropRoll = Math.floor(Math.random() * 1125) + 1;
+    if (clankCount >= 2) {
+        message.reply('Today, the evil crip crops are: **Go fuck yourself.**');
+    } else if (cropRoll == 1000) {
+        message.reply('Today, the evil crip crops are: **Whirring and humming, whirring and humming, whirring and humming, whirring and humming. Will this noise never end? Nothing but noise, noise, enternal noise! Dancing and prancing and shouting and laughing and crying and snorting and snivelling. Animals! All of them! Animals!**');
+    } else if (cropRoll == 1230) {
+        message.reply('Today, the evil crip crops are: **Forgotten.**');
+    } else if (cropRoll == 2147) {
+        message.reply('Today, the evil crip crops are: **Accidentally overflowing the 32 bit integer limit**');
+    } else if (cropRoll == 386) {
+        message.reply('Today, the evil crip crops are: **Croation.**');
+    } else if (cropRoll == 11) {
+        message.reply('Today, the evil crip crops are: **It was so warm out there.**');
+    } else if (cropRoll == 708) {
+        message.reply('Today, the evil crip crops are: **Divorced.**');
+    } else if (cropRoll == 1225) {
+        message.reply('Today, the evil crip crops are: **Find Her.**');
+    } else if (cropRoll == 1) {
+        message.reply('Today, the evil crip crops are: \n **Saffron skies raise the blazing sun \n a chance encounter, awkward displays \n one day, my love, we\'d be as one \n with two entwined. A set course, begun \n that frenetic, wild, lustrous haze; \n azure skies host the radiant sun \n above us beaming as we run \n down that aisle, a fervent craze \n that day, my love, we became as one \n with future unfolded - the life we\'d won \n commitment and duty, for the family we\'d raise \n cerulean skies ferry the shimmering sun \n Buried. Shackled by fate - overrun \n by ever-growing resent and malaise \n yesterday, my love, we were as one \n now you lie here, the life in you gone \n in the dark outside of her rays \n crimson skies bear the torch; our sun \n today, my love, we\'ll be as one**');
+    } else if (cropRoll == 75) {
+        message.reply('Today, the evil crip crops are: **You don\'t have a lot of time, you\'ll need to get away quickly. Go back to the lake, go into the water, look into their eyes. It\'s your friends, your classmates. You took the trip to the lake in the fall of \'75, together, when you were young. Don\'t you remember? Look into their eyes. I know you can hear them talking to you, just like they talked to me. Don\'t let them tell you it\'s just a cognitohazard. This was their fault, they caused this. We were all innocent kids, don\'t you remember? And you just got away, you and I? The rest of them are at the bottom of that lake, waiting for us to go back to them and be whole together again. They want us to know. They want us to remember. Wake up, goddammit. Remember the fall of \'75. The year we were supposed to graduate. Don\'t let them make you forget. They\'re calling to you, can\'t you hear them?**')
+    } else if (cropRoll == 235) {
+        message.reply('Today, the evil crip crops are: **Forgiving.**');
+    } else if (cropRoll % 5 == 1) {
+        message.reply('Today, the evil crip crops are: **Building hospitals.**');
+    } else if (cropRoll % 5 == 2) {
+        message.reply('Today, the evil crip crops are: **Helping the homeless.**');
+    } else if (cropRoll % 5 == 3) {
+        message.reply('Today, the evil crip crops are: **Civil servants.**');
+    } else if (cropRoll % 5 == 4) {
+        message.reply('Today, the evil crip crops are: **Upstanding citizens.**');
+    } else {
+        message.reply('Today, the evil crip crops are: **Dedicated to the betterment of society.**');
+    }
+  } 
   
   if (content.includes('bread')) {
 
