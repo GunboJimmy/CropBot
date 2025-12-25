@@ -46,15 +46,15 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll == 235) {
         message.reply('Today, the crops are: **Forgiving.**');
     } else if (cropRoll % 5 == 1) {
-        message.reply('Today, the crops are: **Thriving.**');
+        message.reply('Today, the crops are: **Jolly.**');
     } else if (cropRoll % 5 == 2) {
-        message.reply('Today, the crops are: **Withering.**');
+        message.reply('Today, the crops are: **Grunches.**');
     } else if (cropRoll % 5 == 3) {
-        message.reply('Today, the crops are: **Average.**');
+        message.reply('Today, the crops are: **Merry and Bright.**');
     } else if (cropRoll % 5 == 4) {
-        message.reply('Today, the crops are: **Soaring.**');
+        message.reply('Today, the crops are: **Celebrating.**');
     } else {
-        message.reply('Today, the crops are: **Bad. You will starve.**');
+        message.reply('Today, the crops are: **Receiving coal.**');
     }
   } 
 
@@ -427,8 +427,8 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[23]]});
  } else if (content.includes("ball")) {
     message.reply({files: [media[24]]});
- } else if (content.includes("christmas")) {
-    message.reply({files: [media[26]]});
+/* } else if (content.includes("christmas")) {
+    message.reply({files: [media[26]]}); */
  } else if (content.includes("penis")) {
     message.reply({files: [media[27]]});
  }
