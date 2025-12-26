@@ -46,15 +46,15 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll == 235) {
         message.reply('Today, the crops are: **Forgiving.**');
     } else if (cropRoll % 5 == 1) {
-        message.reply('Today, the crops are: **Jolly.**');
+        message.reply('Today, the crops are: **Thriving**');
     } else if (cropRoll % 5 == 2) {
-        message.reply('Today, the crops are: **Grunches.**');
+        message.reply('Today, the crops are: **Withering**');
     } else if (cropRoll % 5 == 3) {
-        message.reply('Today, the crops are: **Merry and Bright.**');
+        message.reply('Today, the crops are: **Average.**');
     } else if (cropRoll % 5 == 4) {
-        message.reply('Today, the crops are: **Celebrating.**');
+        message.reply('Today, the crops are: **Soaring.**');
     } else {
-        message.reply('Today, the crops are: **Receiving coal.**');
+        message.reply('Today, the crops are: **Bad. You will starve.**');
     }
   } 
 
