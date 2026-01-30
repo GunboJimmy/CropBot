@@ -15,6 +15,9 @@ client.on('messageCreate', (message) => {
     const userID = message.author.id;
     const content = message.content.toLowerCase();
     const clankRegex = /c+[^a-zA-Z0-9]*l+[^a-zA-Z0-9]*a+[^a-zA-Z0-9]*n+[^a-zA-Z0-9]*k+/i;
+    const riseRegex = /\brise\b/i;
+    const warmRegex = /\bwarm\b/i;
+
     
     if (message.author.bot) return;
 
@@ -380,7 +383,7 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[2]]});
  } else if (content.includes("sex")) {
     message.reply({files: [media[3]]});
- } else if (content.includes("warm")) {
+ } else if (warmRegex.test(content)) {
     message.reply({files: [media[4]]});
  } else if (content.includes("mango")) {
     message.reply({files: [media[5]]});
@@ -399,7 +402,7 @@ client.on('messageCreate', (message) => {
     } else {
         message.reply({files: [media[9]]});
     }
- } else if (content.includes("rise")) {
+ } else if (riseRegex.test(content)) {
     message.reply({files: [media[11]]});
  } else if (content.includes("calculus")) {
     message.reply({files: [media[12]]});
