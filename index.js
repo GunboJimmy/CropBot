@@ -374,6 +374,8 @@ client.on('messageCreate', (message) => {
     "https://i.imgur.com/B7aEtyN.mp4", //A very muscleman christmas 26"
     "https://i.imgur.com/p1iHzro.png", //peener 27
     "https://i.imgur.com/bipyniZ.jpeg", // sans 28
+    "https://i.imgur.com/SKfxpWm.mp4", //Open The Door 29
+    "https://i.imgur.com/mBMuO1I.mp4" //Open The Door (long) 30
    ]
 
  if (content.includes("alien")) {
@@ -435,6 +437,13 @@ client.on('messageCreate', (message) => {
     message.reply({files: [media[26]]}); */
  } else if (content.includes("penis")) {
     message.reply({files: [media[27]]});
+ } else if (content.includes("doorbell")) {
+    let doorRoll = Math.floor(Math.random() * 10) + 1;
+    if (doorRoll == 5) {
+        message.reply({files: [media[29]]});
+    } else {
+        message.reply({files: [media[30]]});
+    }
  }
 
 
