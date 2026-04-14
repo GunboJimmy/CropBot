@@ -440,9 +440,9 @@ client.on('messageCreate', (message) => {
  } else if (content.includes("doorbell")) {
     let doorRoll = Math.floor(Math.random() * 10) + 1;
     if (doorRoll == 5) {
-        message.reply({files: [media[29]]});
-    } else {
         message.reply({files: [media[30]]});
+    } else {
+        message.reply({files: [media[29]]});
     }
  }
 
