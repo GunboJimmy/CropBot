@@ -12,10 +12,10 @@ for (const file of commandFiles) {
   commands.push(command.data.toJSON());
 }
 
-const rest = new REST({ version: '10' }).setToken('YOUR_BOT_TOKEN');
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
 rest.put(
-  Routes.applicationCommands('YOUR_CLIENT_ID'),
+  Routes.applicationCommands('1399545229270581368'),
   { body: commands }
 )
   .then(() => console.log('Successfully registered commands.'))
