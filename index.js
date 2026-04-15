@@ -472,7 +472,7 @@ if (shitFuckVariableThatIHate == 1) {
 });
 
 client.on('interactionCreate', async (interaction) => {
-    if (interaction.isChatInputCommand()) return;
+    if (!interaction.isChatInputCommand()) return;
 
     const command = client.commands.get(interaction.commandName);
 
