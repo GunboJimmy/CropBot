@@ -38,7 +38,7 @@ client.on('messageCreate', (message) => {
 
     if (blacklisted.includes(message.author.id)) return;
 
-    if (!interaction.guild) return;
+
 
   if (message.content == '!cropcheck') {
     let cropRoll = Math.floor(Math.random() * 11226) + 1;
