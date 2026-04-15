@@ -38,6 +38,6 @@ module.exports = {
         response = 'Today, the crops are: **Bad. You will starve.**';
     }
 
-    await interaction.reply(respose);
+    await interaction.reply(response);
   }, 
     }
