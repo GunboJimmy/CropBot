@@ -4,6 +4,19 @@ const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
 });
 
+const fs = require('fs');
+const path = require('path');
+
+client.commands = new Map();
+
+const commandsPath = path.join(__dirname, 'commands');
+const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+
+for (const file of commandFiles) {
+    const command = require('./commands/${file}');
+    client.commands.set(command.data.name, command);
+}
+
 const TOKEN = process.env.DISCORD_TOKEN; 
 let clankCount = 0;
 client.once('ready', () => {
@@ -24,6 +37,7 @@ client.on('messageCreate', (message) => {
 
     if (blacklisted.includes(message.author.id)) return;
 
+    if (!interaction.guild) return;
 
   if (message.content == '!cropcheck') {
     let cropRoll = Math.floor(Math.random() * 11226) + 1;
@@ -455,6 +469,23 @@ if (shitFuckVariableThatIHate == 1) {
 
   
 });
+
+client.on('interactionCreate', async (interaction) => {
+    if (interaction.isChatInputCommand()) return;
+
+    const command = client.commands.get(interaction.commandName);
+
+    if (!command) return;
+
+    try {
+        await command.execute(interaction);
+    } catch (error) {
+        console.error(error);
+        await interaction.reply({ content: 'Error executing command.', ephemeral: true});
+    }
+});
+
+
 
 client.login(TOKEN);
 
