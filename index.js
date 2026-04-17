@@ -204,7 +204,7 @@ client.on('messageCreate', (message) => {
     } else if (cropRoll == 235) {
         message.reply('Today, the Czech crops are: **Forgiving.**');
     } else if (cropRoll % 4 == 1) {
-        message.reply('Today, the Czech crops are: *Good little comrades.**');
+        message.reply('Today, the Czech crops are: **Good little comrades.**');
     } else if (cropRoll % 4 == 2) {
         message.reply('Today, the Czech crops are: **Rapidly militarising.**');
     } else if (cropRoll % 4 == 3) {
@@ -214,6 +214,7 @@ client.on('messageCreate', (message) => {
     }
   }
 
+  /*Adding this shit literally so I can push out this change lmao*/
   
   if (content == "!evilcropczech") {
     let cropRoll = Math.floor(Math.random() * 1125) + 1;
