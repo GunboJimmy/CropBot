@@ -18,6 +18,7 @@ for (const file of commandFiles) {
     const command = require(path.join(commandsPath, file))
     client.commands.set(command.data.name, command);
 }
+const blacklisted = ['788056798829346877']
 
 const TOKEN = process.env.DISCORD_TOKEN; 
 let clankCount = 0;
@@ -32,12 +33,11 @@ client.on('messageCreate', (message) => {
     const clankRegex = /c+[^a-zA-Z0-9]*l+[^a-zA-Z0-9]*a+[^a-zA-Z0-9]*n+[^a-zA-Z0-9]*k+/i;
     const riseRegex = /\brise\b/i;
     const warmRegex = /\bwarm\b/i;
-    const blacklisted = ['788056798829346877']
 
     
     if (message.author.bot) return;
 
-    if (blacklisted.includes(message.author.id)) return;
+
 
 
 
@@ -534,6 +534,9 @@ client.on('interactionCreate', async (interaction) => {
 
     const command = client.commands.get(interaction.commandName);
 
+    if (blacklisted.includes(interaction.user.id)) {
+        return;
+    }
     if (!command) return;
 
     try {
