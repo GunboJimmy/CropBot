@@ -37,7 +37,7 @@ client.on('messageCreate', (message) => {
     
     if (message.author.bot) return;
 
-    if (userID.contains(blacklisted)) return;
+    if (userID.includes(blacklisted)) return;
 
 
 
