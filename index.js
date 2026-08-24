@@ -488,7 +488,7 @@ client.on('messageCreate', (message) => {
     "https://i.imgur.com/mBMuO1I.mp4" //Open The Door (long) 30
    ]
 
- if (userID.includes(optoutList)) return;
+ if (optoutList.includes(userID)) return;
 
  if (content.includes("alien")) {
     message.reply({files: [media[0]]});
