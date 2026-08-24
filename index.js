@@ -40,9 +40,9 @@ client.on('messageCreate', (message) => {
     const rawNickname = '';
 
     
-    const displayName = message.member.displayName;
+    displayName = message.member.displayName;
 
-    const rawNickname = message.member.nickname;
+    rawNickname = message.member.nickname;
     
 
     
