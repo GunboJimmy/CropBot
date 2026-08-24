@@ -36,13 +36,15 @@ client.on('messageCreate', (message) => {
     const warmRegex = /\bwarm\b/i;
     
     const member = message.member;
-    const displayName = '';
-    const rawNickname = '';
+    let displayName = '';
+    let rawNickname = '';
 
-    
-    displayName = message.member.displayName;
+    if (member) {
 
-    rawNickname = message.member.nickname;
+        displayName = message.member.displayName;
+
+        rawNickname = message.member.nickname;
+    }
     
 
     
