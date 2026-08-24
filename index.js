@@ -34,6 +34,16 @@ client.on('messageCreate', (message) => {
     const clankRegex = /c+[^a-zA-Z0-9]*l+[^a-zA-Z0-9]*a+[^a-zA-Z0-9]*n+[^a-zA-Z0-9]*k+/i;
     const riseRegex = /\brise\b/i;
     const warmRegex = /\bwarm\b/i;
+    
+    const member = message.member;
+    const displayName = '';
+    const rawNickname = '';
+
+    if (member) {
+        displayName = member.displayName;
+
+        rawNickname = member.nickname;
+    }
 
     
     if (message.author.bot) return;
@@ -186,8 +196,10 @@ client.on('messageCreate', (message) => {
         let roll = Math.floor(Math.random() * 1125) + 1;
         if (roll == 1) {
             message.reply("Rise and shine, Mxster Freethem. Rise and...shine. Not that I wish to imply you have been sleeping on the job. No one is more deserving of a rest, and all the effort in the world would have gone to waste until...well, let's just say your hour has come again. The right them in the wrong place can make all the difference in the pride month. So woke up, Mxster Freethem. Woke up and smell the pronouns.");
+        } else if (rawNickname != null) {
+            message.reply('Good morning, ' + rawNickname);
         } else {
-            message.reply("Good morning, " + username);
+            message.reply('Good morning, ' + displayName);
         }
   }
 
@@ -428,7 +440,7 @@ client.on('messageCreate', (message) => {
   } 
   
     if (content == '!gppdmogjt') {
-        message.reply('what.');
+        message.reply('**what**');
     }
  
         /*if (content.includes('bread')) {
