@@ -39,11 +39,11 @@ client.on('messageCreate', (message) => {
     const displayName = '';
     const rawNickname = '';
 
-    if (member) {
-        displayName = member.displayName;
+    
+    const displayName = member.displayName;
 
-        rawNickname = member.nickname;
-    }
+    const rawNickname = member.nickname;
+    
 
     
     if (message.author.bot) return;
