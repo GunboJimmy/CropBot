@@ -15,10 +15,11 @@ const commandsPath = path.join(__dirname, 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
-    const command = require(path.join(commandsPath, file))
+    const command = require(path.join(commandsPath, file));
     client.commands.set(command.data.name, command);
 }
-const blacklisted = ['788056798829346877']
+let blacklisted = ['788056798829346877'];
+let optoutList = [];
 
 const TOKEN = process.env.DISCORD_TOKEN; 
 let clankCount = 0;
@@ -39,6 +40,24 @@ client.on('messageCreate', (message) => {
 
     if (userID.includes(blacklisted)) return;
 
+    if (message.content == '!optout') {
+        if (!optoutList.includes(userID)) {
+            optoutList.push(userID);
+            message.reply('You have opted out of CropBot triggers.');
+        } else {
+            message.reply('You already opted out, dipshit');
+        }
+    }
+
+    if (message.content == '!optin') {
+        if (optoutList.includes(userID)) {
+            optoutList.splice(optoutList.indexOf(userID), 1);
+            message.reply('You have opted back in to CropBot triggers.');
+        } else {
+            message.reply('You\'re already opted in, dipshit');
+        }
+
+    }
 
 
   if (message.content == '!cropcheck') {
@@ -408,7 +427,11 @@ client.on('messageCreate', (message) => {
     }
   } 
   
-  /*if (content.includes('bread')) {
+    if (content == '!gppdmogjt') {
+        message.reply('what.');
+    }
+ 
+        /*if (content.includes('bread')) {
 
     message.reply('welcome to the bread bank \n we sell bread, we sell loafs \n we got bread on deck, bread on the floor \n **TOASTED** \n **ROASTED** \n shut the fuck up,listen I just need a baguette and a brioche \n we don\'t have either of those you can get the gluten free white bread or the potato bread- \n what the fuck is gluten? take that shit out \n it\'s gluten free \n *I don\'t care if it\'s free* \n swear on your fucking **YEEZYS** if you wanna fight, we gon\' fight \n tryna be on ***WORLDSTAR?*** \n what, you gon\' record it? \n yeah, I got my dollar store camera **ON** \n ***what\'s the fucking SITUAAAAAAAATION?*** \n **what the fuck do you want?** \n# I’m the motherfucking MANAGER \n at the BREAD STORE? \n# B R E A D \n tell him to take the motherfucking gluten **OUT THE BREAD** \n Imma need you to shut that bullshit up chief, we can\'t take shit out the bread \n why put it in in the first place? **I know y\'all smoking that pack**  \n we got crackers, no gluten \n ***fuck crackers.*** \n it\'s gluten free, you want the gluten or nah? \n hell no, you better take the gluten out that damn shit \n look, we got whole wheat: gluten free; Texas toast: gluten free \n# TORTILLA \n ***fuck all that*** \n what **bitchass country** are y\'all from **where they got this bullshit at?** \n# Florida \n# I knew it \n look, you can take this **yeast**, or I’m calling the **police** \n# I’m goin WEAST \n nah don’t call the police, I got a warrant \n honestly, fuck y’all. I ain’t never seen nobody act like this over no bread \n what the fuck are you saying? \n All I\'m saying is fuck y\'all\'s bread, **fuck the gluten, *and fuck them crackers*** \n but the crackers don’t have gluten \n I’ll take those \n Okay that’s gonna be five dol- \n nah fuck that I ain’t paying')
   } */
@@ -450,6 +473,8 @@ client.on('messageCreate', (message) => {
     "https://i.imgur.com/SKfxpWm.mp4", //Open The Door 29
     "https://i.imgur.com/mBMuO1I.mp4" //Open The Door (long) 30
    ]
+
+ if (userID.includes(optoutList)) return;
 
  if (content.includes("alien")) {
     message.reply({files: [media[0]]});
