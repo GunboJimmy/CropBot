@@ -46,7 +46,7 @@ client.on('messageCreate', (message) => {
         rawNickname = message.member.nickname;
     }
     
-
+// They Call Me YandereDev's Lesbian Cousin
     
     if (message.author.bot) return;
 
@@ -186,12 +186,20 @@ client.on('messageCreate', (message) => {
     }
   }
 
+  let FuckYou = 1;
+  if (FuckYou == 0) {
+        message.reply('Get fucked, ' + rawNickname + '. You are a piece of shit. You are a worthless human being. You are a waste of space and oxygen. You are a cancer on this planet. You are a disgrace to your family, your friends, and yourself. You are a failure in every sense of the word. You are a pathetic excuse for a human being. You are a joke. You are a loser. You are a failure. You are a disappointment. You are a waste of time. You are a waste of life. You are a waste of everything. You are nothing. You are less than nothing. You are less than dirt. You are less than the air you breathe. You are less than the ground you walk on. You are less than the water you drink. You are less than the food you eat. You are less than the sun that shines on you. You are less than the moon that lights your way at night. You are less than the stars that twinkle in the sky above you. You are less than the clouds that float by overhead. You are less than the wind that blows through your hair. You are less than the rain that falls from the sky above you. You are less than the snow that covers the ground beneath your feet in wintertime when it is cold outside and you have no one to keep you warm because everyone hates you and wants nothing to do with you because they know how much of an asshole you really are deep down inside where no one can see it but yourself and maybe even God himself if he exists at all which I doubt because if he did exist he would have struck you down long ago for being such an evil person who does nothing but hurt others around him without any regard for their feelings or well-being whatsoever so go ahead and keep being an asshole because it is all you will ever be good at in life anyway so enjoy it while it lasts because eventually everyone will see through your facade and realize what kind of person you really are and then they will all leave you behind like the worthless piece of shit that you truly are.');
+  }
 
-
+  // This does literally nothing. Lmao.
 
 
   if (message.content.toLowerCase() == '!goodnight') {
-        message.reply('Sweet Dreams, ' + username);
+        if (rawNickname != null) {
+            message.reply('Sweet dreams, ' + rawNickname);
+        } else {
+            message.reply('Sweet dreams, ' + displayName);
+        }
   }
 
   if (content == '!morning') {
