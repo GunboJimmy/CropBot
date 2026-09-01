@@ -33,22 +33,22 @@ const majorArcana = [
     "20 - Judgement", "21 - The World"
 ];
 
-// Draws a single random card, determining if it is upright or reversed
+// Draws a single random card (adds 'Reversed' only if reversed)
 function drawTarotCard() {
     const card = majorArcana[Math.floor(Math.random() * majorArcana.length)];
     const isReversed = Math.random() > 0.5;
-    return `**${card}** ${isReversed ? '(Reversed)' : '(Upright)'}`;
+    return `**${card}${isReversed ? ' Reversed' : ''}**`;
 }
 
-// Draws three unique cards from the deck
+// Draws three unique cards without duplicates
 function drawThreeTarotCards() {
-    let deck = [...majorArcana]; // Copy the deck so we don't draw duplicates
+    let deck = [...majorArcana];
     let drawn = [];
     for (let i = 0; i < 3; i++) {
         const index = Math.floor(Math.random() * deck.length);
         const card = deck.splice(index, 1)[0];
         const isReversed = Math.random() > 0.5;
-        drawn.push(`**${card}** ${isReversed ? '(Reversed)' : '(Upright)'}`);
+        drawn.push(`**${card}${isReversed ? ' Reversed' : ''}**`);
     }
     return drawn;
 }
@@ -492,9 +492,9 @@ client.on('messageCreate', (message) => {
     } else {
         const cards = drawThreeTarotCards();
         message.reply(
-            `Today, the past crops are: **${cards[0]}\n**` +
-            `Today, the present crops are: **${cards[1]}\n**` +
-            `Today, the future crops are: **${cards[2]}**`
+            `Today, the past crops are: ${cards[0]}\n` +
+            `Today, the present crops are: ${cards[1]}\n` +
+            `Today, the future crops are: ${cards[2]}`
         );
     }
   }
