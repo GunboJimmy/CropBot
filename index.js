@@ -33,21 +33,22 @@ const majorArcana = [
     "20 - Judgement", "21 - The World"
 ];
 
-// Draws a single random card (adds 'Reversed' only if reversed)
+// Single card generator
 function drawTarotCard() {
     const card = majorArcana[Math.floor(Math.random() * majorArcana.length)];
-    const isReversed = Math.random() > 0.5;
+    // Strict comparison guarantees a 50/50 boolean split
+    const isReversed = Math.random() >= 0.5; 
     return `**${card}${isReversed ? ' Reversed' : ''}**`;
 }
 
-// Draws three unique cards without duplicates
+// 3-card spread generator (Past, Present, Future without duplicates)
 function drawThreeTarotCards() {
     let deck = [...majorArcana];
     let drawn = [];
     for (let i = 0; i < 3; i++) {
         const index = Math.floor(Math.random() * deck.length);
         const card = deck.splice(index, 1)[0];
-        const isReversed = Math.random() > 0.5;
+        const isReversed = Math.random() >= 0.5;
         drawn.push(`**${card}${isReversed ? ' Reversed' : ''}**`);
     }
     return drawn;
