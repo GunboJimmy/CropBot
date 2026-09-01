@@ -479,7 +479,7 @@ client.on('messageCreate', (message) => {
         message.reply('Today, the evil crip crops are: **Dedicated to the betterment of society.**');
     }
   } 
-  if (content == '!tarotcheck') {
+if (content == '!tarotcheck') {
     if (clankCount >= 2) {
         message.reply('Today, the tarot crops are: **Go fuck yourself.**');
     } else {
