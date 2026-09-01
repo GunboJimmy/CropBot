@@ -23,6 +23,36 @@ let optoutList = [];
 
 const TOKEN = process.env.DISCORD_TOKEN; 
 let clankCount = 0;
+
+const majorArcana = [
+    "0 - The Fool", "1 - The Magician", "2 - The High Priestess", "3 - The Empress",
+    "4 - The Emperor", "5 - The Hierophant", "6 - The Lovers", "7 - The Chariot",
+    "8 - Strength", "9 - The Hermit", "10 - Wheel of Fortune", "11 - Justice",
+    "12 - The Hanged Man", "13 - Death", "14 - Temperance", "15 - The Devil",
+    "16 - The Tower", "17 - The Star", "18 - The Moon", "19 - The Sun",
+    "20 - Judgement", "21 - The World"
+];
+
+// Draws a single random card, determining if it is upright or reversed
+function drawTarotCard() {
+    const card = majorArcana[Math.floor(Math.random() * majorArcana.length)];
+    const isReversed = Math.random() > 0.5;
+    return `**${card}** ${isReversed ? '(Reversed)' : '(Upright)'}`;
+}
+
+// Draws three unique cards from the deck
+function drawThreeTarotCards() {
+    let deck = [...majorArcana]; // Copy the deck so we don't draw duplicates
+    let drawn = [];
+    for (let i = 0; i < 3; i++) {
+        const index = Math.floor(Math.random() * deck.length);
+        const card = deck.splice(index, 1)[0];
+        const isReversed = Math.random() > 0.5;
+        drawn.push(`**${card}** ${isReversed ? '(Reversed)' : '(Upright)'}`);
+    }
+    return drawn;
+}
+
 client.once('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -448,6 +478,28 @@ client.on('messageCreate', (message) => {
         message.reply('Today, the evil crip crops are: **Dedicated to the betterment of society.**');
     }
   } 
+  if (content == '!tarotcheck') {
+    if (clankCount >= 2) {
+        message.reply('Today, the tarot crops are: **Go fuck yourself.**');
+    } else {
+        message.reply(`Today, the tarot crops are: ${drawTarotCard()}`);
+    }
+  }
+
+  if (content == '!futurecheck') {
+    if (clankCount >= 2) {
+        message.reply('Today, the past, present, and future crops are: **Go fuck yourself.**');
+    } else {
+        const cards = drawThreeTarotCards();
+        message.reply(
+            `Today, the past crops are: **${cards[0]}\n**` +
+            `Today, the present crops are: **${cards[1]}\n**` +
+            `Today, the future crops are: **${cards[2]}**`
+        );
+    }
+  }
+
+
   
     if (content == '!gppdmogjt') {
         message.reply('**what**');
