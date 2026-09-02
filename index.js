@@ -19,7 +19,33 @@ for (const file of commandFiles) {
     client.commands.set(command.data.name, command);
 }
 let blacklisted = ['788056798829346877'];
-let optoutList = [];
+const optoutFilePath = path.join(__dirname, 'optout.json');
+
+// Helper function to load opt-out IDs on startup
+function loadOptoutList() {
+    try {
+        if (fs.existsSync(optoutFilePath)) {
+            const data = fs.readFileSync(optoutFilePath, 'utf8');
+            return JSON.parse(data);
+        }
+    } catch (err) {
+        console.error('Error reading optout.json:', err);
+    }
+    return [];
+}
+
+// Helper function to save opt-out IDs to disk
+function saveOptoutList(list) {
+    try {
+        fs.writeFileSync(optoutFilePath, JSON.stringify(list, null, 2));
+    } catch (err) {
+        console.error('Error writing to optout.json:', err);
+    }
+}
+
+// Initialize optoutList from the JSON file
+let optoutList = loadOptoutList();
+
 
 const TOKEN = process.env.DISCORD_TOKEN; 
 let clankCount = 0;
@@ -83,24 +109,25 @@ client.on('messageCreate', (message) => {
 
     if (userID.includes(blacklisted)) return;
 
-    if (message.content == '!optout') {
-        if (!optoutList.includes(userID)) {
-            optoutList.push(userID);
-            message.reply('You have opted out of CropBot triggers.');
-        } else {
-            message.reply('You already opted out, dipshit');
-        }
+if (message.content === '!optout') {
+    if (!optoutList.includes(userID)) {
+        optoutList.push(userID);
+        saveOptoutList(optoutList); // Persist to disk
+        return message.reply('You have opted out of CropBot triggers.');
+    } else {
+        return message.reply('You already opted out, dipshit');
     }
+}
 
-    if (message.content == '!optin') {
-        if (optoutList.includes(userID)) {
-            optoutList.splice(optoutList.indexOf(userID), 1);
-            message.reply('You have opted back in to CropBot triggers.');
-        } else {
-            message.reply('You\'re already opted in, dipshit');
-        }
-
+if (message.content === '!optin') {
+    if (optoutList.includes(userID)) {
+        optoutList.splice(optoutList.indexOf(userID), 1);
+        saveOptoutList(optoutList); // Persist to disk
+        return message.reply('You have opted back in to CropBot triggers.');
+    } else {
+        return message.reply("You're already opted in, dipshit");
     }
+}
 
 
   if (message.content == '!cropcheck') {
