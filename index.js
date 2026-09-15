@@ -121,7 +121,7 @@ client.on('messageCreate', (message) => {
         }
 
         const hours = Math.random() * (16 - 4) + 4;
-        const delayMs = 0.05 * 60 * 60 * 1000;
+        const delayMs = hours * 60 * 60 * 1000;
 
         const timer = setTimeout(async () => {
             const timebomb = activeTimebombs.get(userID);
