@@ -114,24 +114,24 @@ client.on('messageCreate', (message) => {
         }
     };
 
-    // Timebomb activation command
+    
     if (message.content === '!timebomb') {
         if (activeTimebombs.has(userID)) {
-            return message.reply('**Your time runs thin.**');
+            return message.reply('Your time runs thin.');
         }
 
         const hours = Math.random() * (16 - 4) + 4;
-        const delayMs = 0.1 * 60 * 60 * 1000;
+        const delayMs = 0.05 * 60 * 60 * 1000;
 
         const timer = setTimeout(async () => {
             const timebomb = activeTimebombs.get(userID);
             if (timebomb && timebomb.queue.length > 0) {
-                // Send an initial notification to target user
-                await message.channel.send(`<@${userID}> **Eat shit, fucko**`);
                 
-                // Flush all queued messages sequentially
+                await message.reply(`<@${userID}> Eat shit, fucko`);
+                
+                
                 for (const item of timebomb.queue) {
-                    await message.channel.send(item);
+                    await message.reply(item);
                 }
             }
             activeTimebombs.delete(userID);
