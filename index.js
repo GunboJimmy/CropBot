@@ -640,9 +640,9 @@ client.on('messageCreate', (message) => {
     } else if (content.includes("penis")) {
         replyOrQueue({files: [media[27]]});
     } else if (content.includes("doorbell")) {
-        replyOrQueue({files: [media[29]]});
-    } else if (content.includes("i remember")) {
         replyOrQueue({files: [media[30]]});
+    } else if (content.includes("i remember")) {
+        replyOrQueue({files: [media[31]]});
     }
 
     let shitFuckVariableThatIHate = Math.floor(Math.random() * 100000) + 1;
