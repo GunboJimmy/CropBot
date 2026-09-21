@@ -576,7 +576,8 @@ client.on('messageCreate', (message) => {
         "https://i.imgur.com/p1iHzro.png",
         "https://i.imgur.com/bipyniZ.jpeg",
         "https://i.imgur.com/SKfxpWm.mp4",
-        "https://i.imgur.com/mBMuO1I.mp4"
+        "https://i.imgur.com/mBMuO1I.mp4",
+        "https://i.imgur.com/uxWHVSC.mp4"
     ];
 
     if (optoutList.includes(userID)) return;
@@ -640,6 +641,8 @@ client.on('messageCreate', (message) => {
         replyOrQueue({files: [media[27]]});
     } else if (content.includes("doorbell")) {
         replyOrQueue({files: [media[29]]});
+    } else if (content.includes("i remember")) {
+        replyOrQueue({files: [media[30]]});
     }
 
     let shitFuckVariableThatIHate = Math.floor(Math.random() * 100000) + 1;
