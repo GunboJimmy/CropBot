@@ -643,13 +643,13 @@ client.on('messageCreate', (message) => {
                 `      [3] [5]\n` +
                 `        [4]\n` +
                 `\`\`\`\n` +
-                `1. Past: ${c[0]}\n` +
-                `2. Present: ${c[1]}\n` +
+                `1. The Past: ${c[0]}\n` +
+                `2. The Present: ${c[1]}\n` +
                 `3. Hidden Influences: ${c[2]}\n` +
-                `4. Obstacle: ${c[3]}\n` +
-                `5. Environment: ${c[4]}\n` +
+                `4. The Obstacle: ${c[3]}\n` +
+                `5. External Influences: ${c[4]}\n` +
                 `6. Advice: ${c[5]}\n` +
-                `7. Final Outcome: ${c[6]}`
+                `7. The Outcome: ${c[6]}`
             );
         }
     }
@@ -667,16 +667,16 @@ client.on('messageCreate', (message) => {
                 `     [3]         [8]\n` +
                 `                 [7]\n` +
                 `\`\`\`\n` +
-                `1. Heart of the Matter: ${c[0]}\n` +
+                `1. The Present: ${c[0]}\n` +
                 `2. The Challenge: ${c[1]}\n` +
-                `3. Foundation: ${c[2]}\n` +
-                `4. Recent Past: ${c[3]}\n` +
-                `5. Higher Crown: ${c[4]}\n` +
-                `6. Near Future: ${c[5]}\n` +
+                `3. The Past: ${c[2]}\n` +
+                `4. The Near Future: ${c[3]}\n` +
+                `5. The Crown: ${c[4]}\n` +
+                `6. The Subconscious: ${c[5]}\n` +
                 `7. Self: ${c[6]}\n` +
-                `8. Environment: ${c[7]}\n` +
+                `8. External Influences: ${c[7]}\n` +
                 `9. Hopes & Fears: ${c[8]}\n` +
-                `10. Final Outcome: ${c[9]}`
+                `10. TheOutcome: ${c[9]}`
             );
         }
     }
