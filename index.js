@@ -617,13 +617,15 @@ client.on('messageCreate', (message) => {
         } else {
             const c = drawSpreadCards(fullDeck, 4);
             replyOrQueue(
-                `Today, the four crops are:\n\n` +
-                `${c[0]}   |   ${c[1]}\n` +
-                `${c[2]}   |   ${c[3]}\n\n` +
-                `1: Mind: ${c[0]}\n` +
-                `2: Body: ${c[1]}\n` +
-                `3: Spirit: ${c[2]}\n` +
-                `4: Outcome: ${c[3]}`
+                `Today, the four crops are:\n` +
+                `\`\`\`\n` +
+                `[1]  [2]\n` +
+                `[3]  [4]\n` +
+                `\`\`\`\n` +
+                `1. Mind: ${c[0]}\n` +
+                `2. Body: ${c[1]}\n` +
+                `3. Spirit: ${c[2]}\n` +
+                `4. Outcome: ${c[3]}`
             );
         }
     }
@@ -634,18 +636,20 @@ client.on('messageCreate', (message) => {
         } else {
             const c = drawSpreadCards(fullDeck, 7);
             replyOrQueue(
-                `Today, the horseshoe crops are:\n\n` +
-                `${c[0]}                               ${c[6]}\n` +
-                `   ${c[1]}                       ${c[5]}\n` +
-                `      ${c[2]}               ${c[4]}\n` +
-                `              ${c[3]}\n\n` +
-                `1. The Past: ${c[0]}\n` +
-                `2. The Present: ${c[1]}\n` +
+                `Today, the horseshoe crops are:\n` +
+                `\`\`\`\n` +
+                `  [1]         [7]\n` +
+                `    [2]     [6]\n` +
+                `      [3] [5]\n` +
+                `        [4]\n` +
+                `\`\`\`\n` +
+                `1. Past: ${c[0]}\n` +
+                `2. Present: ${c[1]}\n` +
                 `3. Hidden Influences: ${c[2]}\n` +
-                `4. Obstacles: ${c[3]}\n` +
-                `5. External Influences: ${c[4]}\n` +
+                `4. Obstacle: ${c[3]}\n` +
+                `5. Environment: ${c[4]}\n` +
                 `6. Advice: ${c[5]}\n` +
-                `7. The Final Outcome: ${c[6]}`
+                `7. Final Outcome: ${c[6]}`
             );
         }
     }
@@ -656,21 +660,23 @@ client.on('messageCreate', (message) => {
         } else {
             const c = drawSpreadCards(fullDeck, 10);
             replyOrQueue(
-                `Today, the celtic crops are:\n\n` +
-                `              ${c[4]}                      ${c[9]}\n` +
-                `   ${c[3]}   [ ${c[0]} / ${c[1]} ]   ${c[5]}       ${c[8]}\n` +
-                `              ${c[2]}                      ${c[7]}\n` +
-                `                                         ${c[6]}\n\n` +
-                `1. The Present: ${c[0]}\n` +
+                `Today, the celtic crops are:\n` +
+                `\`\`\`\n` +
+                `     [5]         [10]\n` +
+                `  [4][1/2][6]    [9]\n` +
+                `     [3]         [8]\n` +
+                `                 [7]\n` +
+                `\`\`\`\n` +
+                `1. Heart of the Matter: ${c[0]}\n` +
                 `2. The Challenge: ${c[1]}\n` +
-                `3. The Root Cause: ${c[2]}\n` +
-                `4. Near Future: ${c[3]}\n` +
-                `5. Goals: ${c[4]}\n` +
-                `6. The Subconscious: ${c[5]}\n` +
+                `3. Foundation: ${c[2]}\n` +
+                `4. Recent Past: ${c[3]}\n` +
+                `5. Higher Crown: ${c[4]}\n` +
+                `6. Near Future: ${c[5]}\n` +
                 `7. Self: ${c[6]}\n` +
-                `8. External Influences: ${c[7]}\n` +
-                `9. Hopes and Fears: ${c[8]}\n` +
-                `10. The Outcome: ${c[9]}`
+                `8. Environment: ${c[7]}\n` +
+                `9. Hopes & Fears: ${c[8]}\n` +
+                `10. Final Outcome: ${c[9]}`
             );
         }
     }
