@@ -676,7 +676,7 @@ client.on('messageCreate', (message) => {
                 `7. Self: ${c[6]}\n` +
                 `8. External Influences: ${c[7]}\n` +
                 `9. Hopes & Fears: ${c[8]}\n` +
-                `10. TheOutcome: ${c[9]}`
+                `10. The Outcome: ${c[9]}`
             );
         }
     }
