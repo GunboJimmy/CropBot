@@ -61,6 +61,51 @@ const majorArcana = [
     "20 - Judgement", "21 - The World"
 ];
 
+const minorArcana = [];
+const suits = ['Wands', 'Cups', 'Swords', 'Pentacles'];
+const ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Page', 'Knight', 'Queen', 'King'];
+
+for (const suit of suits) {
+    for (const rank of ranks) {
+        minorArcana.push(`${rank} of ${suit}`);
+    }
+}
+
+//Full Deck of all cards
+const fullDeck = [...majorArcana, ...minorArcana];
+
+//Draws any tarot card (including minor)
+function drawAnyTarotCard() {
+    const card = fullDeck[Math.floor(Math.random() * fullDeck.length)];
+    const isReversed = Math.random() >= 0.5;
+    return `**${card}${isReversed ? ' Reversed' : ''}**`;
+}
+
+//Draws any minor arcana
+function drawMinorArcanaCard() {
+    const card = minorArcana[Math.floor(Math.random() * minorArcana.length)];
+    const isReversed = Math.random() >= 0.5;
+    return `**${card}${isReversed ? ' Reversed' : ''}**`;
+}
+
+// 3. Draws 3 random Major or Minor Arcana cards (Past, Present, Future without duplicates)
+function drawThreeAnyTarotCards() {
+    return drawSpreadCards(fullDeck, 3);
+}
+
+// Helper to draw N unique cards from a given deck array
+function drawSpreadCards(deck, count) {
+    let tempDeck = [...deck];
+    let drawn = [];
+    for (let i = 0; i < count; i++) {
+        const index = Math.floor(Math.random() * tempDeck.length);
+        const card = tempDeck.splice(index, 1)[0];
+        const isReversed = Math.random() >= 0.5;
+        drawn.push(`**${card}${isReversed ? ' Reversed' : ''}**`);
+    }
+    return drawn;
+}
+
 // Single card generator
 function drawTarotCard() {
     const card = majorArcana[Math.floor(Math.random() * majorArcana.length)];
@@ -520,11 +565,19 @@ client.on('messageCreate', (message) => {
         if (clankCount >= 2) {
             replyOrQueue('Today, the tarot crops are: **Go fuck yourself.**');
         } else {
+            replyOrQueue(`Today, the tarot crops are: ${drawAnyTarotCard()}`);
+        }
+    }
+
+    if (content == '!majortarotcheck') {
+        if (clankCount >= 2) {
+            replyOrQueue('Today, the tarot crops are: **Go fuck yourself.**');
+        } else {
             replyOrQueue(`Today, the tarot crops are: ${drawTarotCard()}`);
         }
     }
 
-    if (content == '!futurecheck') {
+    if (content == '!majorfuturecheck') {
         if (clankCount >= 2) {
             replyOrQueue('Today, the past, present, and future crops are: **Go fuck yourself.**');
         } else {
@@ -533,6 +586,91 @@ client.on('messageCreate', (message) => {
                 `Today, the past crops are: ${cards[0]}\n` +
                 `Today, the present crops are: ${cards[1]}\n` +
                 `Today, the future crops are: ${cards[2]}`
+            );
+        }
+    }
+
+    if (content == '!minortarotcheck') {
+        if (clankCount >= 2) {
+            replyOrQueue('Today, the minor crops are: **Go fuck yourself.**');
+        } else {
+            replyOrQueue(`Today, the minor crops are: ${drawMinorArcanaCard()}`);
+        }
+    }
+
+    if (content == '!futurecheck') {
+        if (clankCount >= 2) {
+            replyOrQueue('Today, the past, present, and future crops are: **Go fuck yourself.**');
+        } else {
+            const cards = drawThreeAnyTarotCards();
+            replyOrQueue(
+                `Today, the past crops are: ${cards[0]}\n` +
+                `Today, the present crops are: ${cards[1]}\n` +
+                `Today, the future crops are: ${cards[2]}`
+            );
+        }
+    }
+
+    if (content == '!wellbeingcheck') {
+        if (clankCount >= 2) {
+            replyOrQueue('Today, the four crops are: **Go fuck yourself.**');
+        } else {
+            const c = drawSpreadCards(fullDeck, 4);
+            replyOrQueue(
+                `Today, the four crops are:\n\n` +
+                `${c[0]}   |   ${c[1]}\n` +
+                `${c[2]}   |   ${c[3]}\n\n` +
+                `1: Mind: ${c[0]}\n` +
+                `2: Body: ${c[1]}\n` +
+                `3: Spirit: ${c[2]}\n` +
+                `4: Outcome: ${c[3]}`
+            );
+        }
+    }
+
+    if (content == '!horseshoecheck') {
+        if (clankCount >= 2) {
+            replyOrQueue('Today, the horseshoe crops are: **Go fuck yourself.**');
+        } else {
+            const c = drawSpreadCards(fullDeck, 7);
+            replyOrQueue(
+                `Today, the horseshoe crops are:\n\n` +
+                `${c[0]}                               ${c[6]}\n` +
+                `   ${c[1]}                       ${c[5]}\n` +
+                `      ${c[2]}               ${c[4]}\n` +
+                `              ${c[3]}\n\n` +
+                `1. The Past: ${c[0]}\n` +
+                `2. The Present: ${c[1]}\n` +
+                `3. Hidden Influences: ${c[2]}\n` +
+                `4. Obstacles: ${c[3]}\n` +
+                `5. External Influences: ${c[4]}\n` +
+                `6. Advice: ${c[5]}\n` +
+                `7. The Final Outcome: ${c[6]}`
+            );
+        }
+    }
+
+    if (content == '!celticcheck') {
+        if (clankCount >= 2) {
+            replyOrQueue('Today, the celtic crops are: **Go fuck yourself.**');
+        } else {
+            const c = drawSpreadCards(fullDeck, 10);
+            replyOrQueue(
+                `Today, the celtic crops are:\n\n` +
+                `              ${c[4]}                      ${c[9]}\n` +
+                `   ${c[3]}   [ ${c[0]} / ${c[1]} ]   ${c[5]}       ${c[8]}\n` +
+                `              ${c[2]}                      ${c[7]}\n` +
+                `                                         ${c[6]}\n\n` +
+                `1. The Present: ${c[0]}\n` +
+                `2. The Challenge: ${c[1]}\n` +
+                `3. The Root Cause: ${c[2]}\n` +
+                `4. Near Future: ${c[3]}\n` +
+                `5. Goals: ${c[4]}\n` +
+                `6. The Subconscious: ${c[5]}\n` +
+                `7. Self: ${c[6]}\n` +
+                `8. External Influences: ${c[7]}\n` +
+                `9. Hopes and Fears: ${c[8]}\n` +
+                `10. The Outcome: ${c[9]}`
             );
         }
     }

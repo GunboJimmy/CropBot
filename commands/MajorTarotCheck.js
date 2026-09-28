@@ -32,7 +32,7 @@ function drawThreeTarotCards() {
 
 
 module.exports = {
-    data: new SlashCommandBuilder().setName('tarotcheck').setDescription('Draws a single major arcana card.'),
+    data: new SlashCommandBuilder().setName('majortarotcheck').setDescription('Draws a single major arcana card.'),
 
     async execute(interaction) {
         let response;
