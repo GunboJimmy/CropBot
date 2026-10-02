@@ -82,9 +82,9 @@ module.exports = {
         let response;
         
 
-        response = (`Today, the tarot crops are: ${drawAnyTarotCard()}`);
+        response = (`Today, the tarot crops are: ${drawTarotCard()}`);
 
     await interaction.deferReply();
     await interaction.editReply(response);
   }, 
-    }
+    }  
