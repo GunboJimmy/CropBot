@@ -81,8 +81,10 @@ module.exports = {
     async execute(interaction) {
         let response;
         
-
-        response = (`Today, the tarot crops are: ${drawTarotCard()}`);
+        const cards = drawThreeTarotCards();
+        response = (`Today, the past crops are: ${cards[0]}\n` +
+                `Today, the present crops are: ${cards[1]}\n` +
+                `Today, the future crops are: ${cards[2]}`);
 
     await interaction.deferReply();
     await interaction.editReply(response);
