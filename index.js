@@ -321,7 +321,7 @@ client.on('messageCreate', (message) => {
     }
 
     if (content == '!morning') {
-        let roll = Math.floor(Math.random() * 1125) + 1;
+        let roll = Math.floor(Math.random() * 125) + 1;
         if (roll == 50) {
             replyOrQueue("Rise and shine, Mxster Freethem. Rise and...shine. Not that I wish to imply you have been sleeping on the job. No one is more deserving of a rest, and all the effort in the world would have gone to waste until...well, let's just say your hour has come again. The right them in the wrong place can make all the difference in the pride month. So woke up, Mxster Freethem. Woke up and smell the pronouns.");
         } else if (rawNickname != null) {
